@@ -1,3 +1,5 @@
+# 같은 Network에서의 작동
+
 version: '3'
 services:
   app3:
@@ -19,6 +21,4 @@ services:
       - |
         ping app2
 
-networks:
-  lotto:
-    external: true
+# network

@@ -1,3 +1,5 @@
+# external network
+
 version: '3'
 services:
   app1:
@@ -19,6 +21,4 @@ services:
       - |
         tail -f /dev/null
 
-networks:
-  lotto:
-    external: true
+# network

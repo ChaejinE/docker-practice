@@ -1,3 +1,5 @@
+# internal network
+
 version: '3'
 services:
   app1:
@@ -13,6 +15,4 @@ services:
     networks:
       - our_net
 
-networks:
-  our_net:
-    driver: bridge
+# network
