@@ -6,8 +6,7 @@ services:
     command:
       - |
         touch /mnt/app1file && ls /mnt
-    volumes:
-      - ./shared_folder:/mnt
+    # shared local volume
   app2:
     image: python:3.9-slim
     entrypoint: [ "sh", "-c" ]
@@ -16,16 +15,14 @@ services:
     command:
       - |
         touch /mnt/app2file && ls /mnt
-    volumes:
-      - ./shared_folder:/mnt
+    # shared local volume
   app3:
     image: python:3.9-slim
     entrypoint: [ "sh", "-c" ]
     command:
       - |
         touch /mnt/app3file && ls /mnt
-    volumes:
-      - shared_volume:/mnt/app3
+    # shared internal volume
   app4:
     image: python:3.9-slim
     entrypoint: [ "sh", "-c" ]
@@ -34,8 +31,6 @@ services:
     command:
       - |
         touch /mnt/app4file && ls /mnt
-    volumes:
-      - shared_volume:/mnt/app4
+    # shared internal volume
 
-volumes:
-  shared_volume:
+    # volumes
